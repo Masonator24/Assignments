@@ -6,8 +6,8 @@ o	# Due Date: 09/05/2025
 o	# Purpose: What does the program do (in a few sentences)? This program allows for users to append data to an input buffer. They could also clear the data if they choose to. There is also an option that allows for them to view their current input buffer. If there is no buffer present, a message will display saying the input buffer is empty. If users are finished, they can exit the program.
 o	# List Specific resources used to complete the assignment. (PyCharm as an IDE)
 input_buff = ""
-print("Please choose one of the following 4 choices: ")
 while True:
+    print("Please choose one of the following 4 choices: ")
     print("1) Append Data to the input buffer")
     print("2) Clear the input buffer")
     print("3) Display the input buffer")
