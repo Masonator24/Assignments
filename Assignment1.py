@@ -2,9 +2,9 @@ o	# Program Name: Assignment1.py (use the name the program is saved as)
 o	# Course: IT3883/Section W02
 o	# Student Name: Mason Gilbert
 o	# Assignment Number: Assignment 1
-o	# Due Date: 09/05/ 2025
-o	# Purpose: What does the program do (in a few sentences)?
-o	# List Specific resources used to complete the assignment.
+o	# Due Date: 09/05/2025
+o	# Purpose: What does the program do (in a few sentences)? This program allows for users to append data to an input buffer. They could also clear the data if they choose to. There is also an option that allows for them to view their current input buffer. If there is no buffer present, a message will display saying the input buffer is empty. If users are finished, they can exit the program.
+o	# List Specific resources used to complete the assignment. (PyCharm as an IDE)
 input_buff = ""
 print("Please choose one of the following 4 choices: ")
 while True:
