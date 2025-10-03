@@ -27,4 +27,3 @@ result= t.Label(root, text="", fg ="red")
 result.grid(row = 1, column = 1, padx = 12, pady = 12)
 #This will run the program
 root.mainloop()
-
