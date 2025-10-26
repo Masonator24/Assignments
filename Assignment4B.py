@@ -5,27 +5,22 @@
 	# Due Date: 10/26/2025
 	# Purpose: This program allows for users to send a string to a connected server. It will then be sent and converted into upper case and shall be sent back to the user.
   # List Specific resources used to complete the assignment. (PyCharm as an IDE), Stackflow, Baeldung, Python.org, KSU Slideshows
-server_ip = "127.0.0.1"
-port = 40021
-socket_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print(f"Connecting to server at {server_ip}:{port}")
-socket_client.connect((server_ip, port))
-print("Successful Connection!")
-user_input = input("Please enter a string to send: ")
-socket_client.sendall(user_input.encode())
-server_response = socket_client.recv(1024).decode()
-print("Response received from server!", server_response)
-socket_client.close()
-
 import socket
-server_ip = "127.0.0.1"
-port = 40021
-socket_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print(f"Connecting to server at {server_ip}:{port}")
-socket_client.connect((server_ip, port))
-print("Successful Connection!")
-user_input = input("Please enter a string to send: ")
-socket_client.sendall(user_input.encode())
-server_response = socket_client.recv(1024).decode()
-print("Response received from server!")
-socket_client.close()
+server_host = "127.0.0.1"
+port = 40121
+socket_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+socket_server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+socket_server.bind((server_host, port))
+socket_server.listen(1)
+print(f"Server is currently listening on {server_host}:{port}!")
+connection, address = socket_server.accept()
+print("Successfully connected!")
+
+data = connection.recv(1024)
+
+server_response = data.decode().upper()
+connection.sendall(server_response.encode())
+print("The message has been converted and sent back!")
+
+connection.close()
+socket_server.close()
