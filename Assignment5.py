@@ -1,3 +1,10 @@
+# Program Name: Assignment5.py (use the name the program is saved as)
+	# Course: IT3883/Section W02
+	# Student Name: Mason Gilbert
+	# Assignment Number: Assignment 5
+	# Due Date: 11/16/2025
+	# Purpose: This program will use a input text file of temperatures and create a table to store them. After, the average of sundays and thursdays are calculated and printed out.
+  # List Specific resources used to complete the assignment. (PyCharm as an IDE), GeeksForGeeks, SQLLite, MySQL
 import sqlite3
 
 file_input = "Assignment5input.txt"
